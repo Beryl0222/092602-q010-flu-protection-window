@@ -1,0 +1,9 @@
+[project]
+name = "flu-protection-window"
+version = "0.1.0"
+description = "儿童流感保护窗口推演的服务端领域基础"
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
