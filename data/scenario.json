@@ -1,0 +1,89 @@
+{
+  "guidelines": [
+    {
+      "guideline_id": "gl-2025",
+      "version": "2025版",
+      "effective_from": "2025-09-01",
+      "gap_max_days": 28,
+      "protection_days": 180,
+      "waning_days": 60,
+      "two_dose_under_months": 108,
+      "min_dose_interval_days": 28,
+      "min_class_size": 5,
+      "high_risk_below": 0.5,
+      "medium_risk_below": 0.75,
+      "exposure_window_days": 14,
+      "region": null
+    },
+    {
+      "guideline_id": "gl-2026-north",
+      "version": "2026版-北方",
+      "effective_from": "2026-11-01",
+      "gap_max_days": 21,
+      "protection_days": 180,
+      "waning_days": 45,
+      "two_dose_under_months": 108,
+      "min_dose_interval_days": 28,
+      "min_class_size": 5,
+      "high_risk_below": 0.5,
+      "medium_risk_below": 0.75,
+      "exposure_window_days": 14,
+      "region": "north"
+    }
+  ],
+  "seasons": [
+    {
+      "season_id": "north-2026-2027",
+      "region": "north",
+      "name": "北方2026-2027流行季",
+      "start_date": "2026-10-01",
+      "end_date": "2027-03-31",
+      "intensity": "normal"
+    }
+  ],
+  "children": [
+    {"child_id": "c1", "birth_date": "2016-09-10", "name": "甲"},
+    {"child_id": "c2", "birth_date": "2016-06-20", "name": "乙"},
+    {"child_id": "c3", "birth_date": "2016-09-01", "name": "丙"},
+    {"child_id": "c4", "birth_date": "2018-01-15", "name": "丁"},
+    {"child_id": "c5", "birth_date": "2017-12-05", "name": "戊"},
+    {"child_id": "c6", "birth_date": "2017-01-11", "name": "己"},
+    {"child_id": "c7", "birth_date": "2018-02-11", "name": "庚"},
+    {"child_id": "c8", "birth_date": "2017-08-30", "name": "辛"}
+  ],
+  "consents": [
+    {"child_id": "c1", "guardian_id": "g1", "granted": true, "valid_from": "2026-01-01"},
+    {"child_id": "c2", "guardian_id": "g2", "granted": true, "valid_from": "2026-01-01"},
+    {"child_id": "c3", "guardian_id": "g3", "granted": true, "valid_from": "2026-01-01"},
+    {"child_id": "c4", "guardian_id": "g4", "granted": true, "valid_from": "2026-01-01"},
+    {"child_id": "c6", "guardian_id": "g6", "granted": true, "valid_from": "2026-01-01"}
+  ],
+  "classes": [
+    {"class_id": "class-1-1", "name": "一年级1班", "region": "north"},
+    {"class_id": "class-1-2", "name": "一年级2班", "region": "north"}
+  ],
+  "enrollments": [
+    {"child_id": "c1", "class_id": "class-1-1", "valid_from": "2026-09-01", "reason": "开学分班"},
+    {"child_id": "c2", "class_id": "class-1-1", "valid_from": "2026-09-01", "reason": "开学分班"},
+    {"child_id": "c3", "class_id": "class-1-1", "valid_from": "2026-09-01", "reason": "开学分班"},
+    {"child_id": "c4", "class_id": "class-1-1", "valid_from": "2026-09-01", "reason": "开学分班"},
+    {"child_id": "c5", "class_id": "class-1-1", "valid_from": "2026-09-01", "reason": "开学分班"},
+    {"child_id": "c6", "class_id": "class-1-1", "valid_from": "2026-09-01", "reason": "开学分班"},
+    {"child_id": "c7", "class_id": "class-1-2", "valid_from": "2026-09-01", "reason": "开学分班"},
+    {"child_id": "c8", "class_id": "class-1-2", "valid_from": "2026-09-01", "reason": "开学分班"}
+  ],
+  "certificates": [
+    {"cert_id": "cert-c1-1", "business_key": "BK-C1-2026-09", "child_id": "c1", "dose_seq": 1, "vaccinated_on": "2026-09-01", "vaccine": "influenza", "submitted_at": "2026-09-02T08:00:00+00:00"},
+    {"cert_id": "cert-c2-1", "business_key": "BK-C2-2026-03", "child_id": "c2", "dose_seq": 1, "vaccinated_on": "2026-03-01", "vaccine": "influenza", "submitted_at": "2026-09-02T08:05:00+00:00"},
+    {"cert_id": "cert-c3-1", "business_key": "BK-C3-2025-10", "child_id": "c3", "dose_seq": 1, "vaccinated_on": "2025-10-01", "vaccine": "influenza", "submitted_at": "2026-09-02T08:10:00+00:00"},
+    {"cert_id": "cert-c3-1b", "business_key": "BK-C3-2025-10", "child_id": "c3", "dose_seq": 1, "vaccinated_on": "2025-10-05", "vaccine": "influenza", "submitted_at": "2026-09-03T09:00:00+00:00"},
+    {"cert_id": "cert-c6-1", "business_key": "BK-C6-2026-09", "child_id": "c6", "dose_seq": 1, "vaccinated_on": "2026-09-25", "vaccine": "influenza", "submitted_at": "2026-09-26T08:15:00+00:00"},
+    {"cert_id": "cert-c7-1", "business_key": "BK-C7-2026-09", "child_id": "c7", "dose_seq": 1, "vaccinated_on": "2026-09-05", "vaccine": "influenza", "submitted_at": "2026-09-06T08:00:00+00:00"}
+  ],
+  "deferrals": [
+    {"deferral_id": "def-c5-1", "child_id": "c5", "start_date": "2026-09-10", "end_date": "2026-10-20", "reason": "近期使用免疫球蛋白，医嘱暂缓"}
+  ],
+  "exposures": [
+    {"event_id": "exp-1", "class_id": "class-1-1", "occurred_on": "2026-10-10", "description": "确诊流感病例1例"}
+  ]
+}

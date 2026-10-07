@@ -1,0 +1,29 @@
+{
+  "名称": "儿童流感保护窗口推演情景输入",
+  "说明": "load 子命令接收的整包情景。日期统一为 YYYY-MM-DD；guideline.region 为 null 表示通用版本，可被地区专用版本在生效后覆盖。",
+  "顶层字段": {
+    "guidelines": "年度指南版本：空白期 gap_max_days、保护 protection_days、衰减 waning_days、两剂月龄/间隔、最小群体人数与风险阈值；版本只改变生效日之后的预测",
+    "seasons": "地区流行季假设，start_date/end_date 允许跨年",
+    "children": "儿童：child_id、birth_date、name",
+    "consents": "家长授权：granted 决定个体细节与个体通知是否开放",
+    "classes": "班级及其地区编码（如 north）",
+    "enrollments": "班级归属时段；valid_to 为 null 表示当前在班，转班即新增时段",
+    "certificates": "接种凭证：按 business_key 去重；同 key 内容哈希不同则置 conflict_pending 并入隐私复核队列",
+    "deferrals": "医学暂缓闭区间 [start_date, end_date]",
+    "exposures": "班内暴露事件，观察窗内班级风险上调一级"
+  },
+  "个体规则类别": {
+    "gap": "接种后两到四周免疫空白期，未计入保护",
+    "incomplete_schedule": "需要第二剂或两剂间隔不足",
+    "waning": "保护衰减期，仍计入班级覆盖",
+    "expired": "保护到期",
+    "unvaccinated": "无有效接种记录",
+    "deferred": "医学暂缓期间",
+    "unknown_guideline": "当日无生效指南版本"
+  },
+  "披露规则": [
+    "班主任仅获得达到最小群体人数班级的风险级别，不含人数明细与个体信息",
+    "个体健康细节仅对 school_doctor、child_health_office 及被授权监护人开放",
+    "历史接种事实与已发出/已抑制通知不被指南更新或重算改写"
+  ]
+}
